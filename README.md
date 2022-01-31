@@ -7,14 +7,13 @@ This repo is designed to deploy a consul datacenter quickly into AWS and have th
 1. You'll need to update some values within the [variables.tf](variables.tf).
 
 
-Update the `required-tags` section with the correct `Creator`. Leave other values as is.
+Update the `required-tags` section with the and other KV pairs you'd like to have on the resources. Leave `consul_join` values as is.
 
 ```HCL
 
 variable "required-tags" {
   type = map(string)
   default = {
-    ExpiryDate = "2022-12-16"
     Terraform  = "true"
     consul_join = "true"
   }
@@ -40,7 +39,7 @@ variable "consul-sg-ingress-rules" {
 
 ```
 
-2. Create a `terraform.tfvars` file inside this folder and add the values to all the following fields.
+2. Create a `terraform.tfvars` file inside this folder and add the values to all the following fields. Descriptions can be found in [variables.tf](variables.tf)
 
 ```HCL
 

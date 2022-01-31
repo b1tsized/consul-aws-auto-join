@@ -1,10 +1,18 @@
-variable "region" {}
+variable "region" {
+  description = "Region of AWS you'd like to deploy this Consul datacenter"
+}
 
-variable "support-vpc" {}
+variable "vpc-id" {
+  description = "VPC ID you'd like to use to deploy the Consul datacenter"
+}
 
-variable "key-name" {}
+variable "key-name" {
+  description = "Name of the SSH Key stored in AWS"
+}
 
-variable "data-center" {}
+variable "data-center" {
+  description = "Name you'd like to give the Consul datacenter"
+}
 
 variable "consul-servers" {
   description = "Number of Consul Servers"
@@ -21,7 +29,6 @@ variable "consul-clients" {
 variable "required-tags" {
   type = map(string)
   default = {
-    ExpiryDate = "2022-12-16"
     Terraform  = "true"
     consul_join = "true"
   }
