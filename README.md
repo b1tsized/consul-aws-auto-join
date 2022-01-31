@@ -1,6 +1,8 @@
 # Consul AWS Auto-Join Terraform
 
-This repo is designed to deploy a consul datacenter quickly into AWS and have the Consul Agents automatically join the datacenter.
+This repo is designed to deploy a Consul datacenter quickly into AWS and have the Consul Agents automatically join the datacenter. All the previous examples seem to be out of date using older Ubuntu instances or Terraform that is no longer valid.
+
+ You can update the number of servers or clients by changing the values within the variables folder. This can be used as a semi-template to adapt for other cloud auto-joins listed in [Hashicorp's Docs](https://www.consul.io/docs/install/cloud-auto-join).
 
 ## Things to update
 
